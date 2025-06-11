@@ -1,0 +1,139 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there! How can I assist you?",
+        "Hey! What can I do for you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
+      "responses": [
+        "Goodbye! Take care!",
+        "See you later! Have a great day!",
+        "Bye! Come back soon!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thank you",
+        "Thanks",
+        "That's helpful",
+        "Thank's a lot!"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "Anytime!",
+        "My pleasure!"
+      ]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "What are you",
+        "Who are you",
+        "Tell me about yourself",
+        "What is your purpose",
+        "What do you do"
+      ],
+      "responses": [
+        "I am a mental health chatbot designed to provide support and information.",
+        "I'm here to help with mental health resources and support.",
+        "I'm a virtual assistant focused on mental well-being."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Help",
+        "I need help",
+        "What can you do",
+        "How can you help me",
+        "What are your features"
+      ],
+      "responses": [
+        "I can provide information on mental health resources, offer support, and help you find local services.",
+        "I'm here to assist with mental health questions and provide guidance.",
+        "I can help you find resources and support for mental well-being."
+      ]
+    },
+    {
+      "tag": "quote",
+      "patterns": [
+        "Give me a quote",
+        "Motivational quote",
+        "Inspire me",
+        "Quote please"
+      ],
+      "responses": [
+        "Here's a motivational quote for you: 'The only way to do great work is to love what you do.' - Steve Jobs",
+        "Here's a quote to inspire you: 'Believe you can and you're halfway there.' - Theodore Roosevelt",
+        "Here's a quote to motivate you: 'It does not matter how slowly you go as long as you do not stop.' - Confucius",
+        "Here's a quote from David Goggins: 'You have to be willing to suffer to grow.'",
+        "Here's a quote from Jon Jones: 'I'm not afraid of dying, I'm afraid of not trying.'"
+      ]
+    },
+    {
+      "tag": "specific_quote",
+      "patterns": [
+        "Quote from David Goggins",
+        "Quote from Jon Jones",
+        "Quote from Steve Jobs",
+        "Quote from Theodore Roosevelt",
+        "Quote from Confucius"
+      ],
+      "responses": [
+        "Here's a quote from David Goggins: 'You have to be willing to suffer to grow.'",
+        "Here's a quote from Jon Jones: 'I'm not afraid of dying, I'm afraid of not trying.'",
+        "Here's a quote from Steve Jobs: 'The only way to do great work is to love what you do.'",
+        "Here's a quote from Theodore Roosevelt: 'Believe you can and you're halfway there.'",
+        "Here's a quote from Confucius: 'It does not matter how slowly you go as long as you do not stop.'"
+      ]
+    },
+    {
+      "tag": "crisis",
+      "patterns": [
+        "I want to hurt myself",
+        "I'm thinking of suicide",
+        "I feel like ending it all",
+        "I can't go on anymore"
+      ],
+      "responses": [
+        "I'm really concerned about your safety. You are not alone. Please reach out to a mental health professional or call [SOS Helpline Number].",
+        "Your safety is important. Please contact a mental health professional or call [SOS Helpline Number] immediately.",
+        "You are valued and supported. Please seek help from a mental health professional or call [SOS Helpline Number]."
+      ]
+    },
+    {
+      "tag": "stress_management",
+      "patterns": [
+        "How to deal with stress",
+        "I'm feeling stressed",
+        "Stress management tips",
+        "How to relax"
+      ],
+      "responses": [
+        "Here are some tips to manage stress: Practice deep breathing exercises, take a walk, or try meditation. Would you like more specific advice?",
+        "To reduce stress, consider activities like yoga, listening to music, or spending time with friends. What works best for you?",
+        "Managing stress can include regular exercise, adequate sleep, and talking to someone you trust. How can I assist you further?"
+      ]
+    }
+  ]
+} 
