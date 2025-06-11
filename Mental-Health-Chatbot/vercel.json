@@ -7,7 +7,7 @@
             "config": {
                 "maxLambdaSize": "15mb",
                 "runtime": "python3.9",
-                "installCommand": "apt-get update && apt-get install -y libpq-dev gcc && pip install -r requirements.txt"
+                "installCommand": "chmod +x build.sh && ./build.sh"
             }
         }
     ],
