@@ -1,0 +1,143 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+  .auth-container {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  .auth-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    padding: 2.5rem;
+  }
+  .auth-title {
+    font-family: 'Merriweather', serif;
+    color: #0d6efd;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .auth-subtitle {
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .form-control {
+    border-radius: 1rem;
+    border: 2px solid rgba(13, 202, 240, 0.2);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  .form-control:focus {
+    border-color: #0dcaf0;
+    box-shadow: 0 0 0 0.2rem rgba(13, 202, 240, 0.25);
+  }
+  .form-control.is-invalid {
+    border-color: #dc3545;
+  }
+  .invalid-feedback {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+  .submit-btn {
+    background: linear-gradient(90deg, #0d6efd 0%, #0dcaf0 100%);
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+    background: linear-gradient(90deg, #0dcaf0 0%, #0d6efd 100%);
+  }
+  .auth-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #6c757d;
+  }
+  .auth-link {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .auth-link:hover {
+    color: #0dcaf0;
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    .auth-container {
+      margin: 2rem auto;
+    }
+    .auth-card {
+      padding: 1.5rem;
+    }
+    .auth-title {
+      font-size: 1.5rem;
+    }
+    .auth-subtitle {
+      font-size: 1rem;
+    }
+    .submit-btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+</style>
+<div class="auth-container">
+  <div class="auth-card">
+    <h1 class="auth-title">Reset Password</h1>
+    <p class="auth-subtitle">Please enter your new password below.</p>
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      <fieldset class="form-group">
+        <div class="form-group">
+          {{ form.password.label(class="form-label") }}
+          {% if form.password.errors %}
+            {{ form.password(class="form-control form-control-lg is-invalid") }}
+            {% for error in form.password.errors %}
+              <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+          {% else %}
+            {{ form.password(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+        <div class="form-group">
+          {{ form.confirm_password.label(class="form-label") }}
+          {% if form.confirm_password.errors %}
+            {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+            {% for error in form.confirm_password.errors %}
+              <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+          {% else %}
+            {{ form.confirm_password(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+      </fieldset>
+      <div class="form-group">
+        {{ form.submit(class="submit-btn") }}
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,144 @@
+{% extends 'layout.html' %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    min-height: 100vh;
+  }
+  .about-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    padding: 3rem 2rem;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .about-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: #0d6efd;
+    border-bottom: 2px solid #0dcaf0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  .about-image {
+    width: 18.75rem;
+    height: 18.75rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0dcaf0;
+    box-shadow: 0 4px 24px rgba(13, 110, 253, 0.12);
+    margin-bottom: 2rem;
+    background: #f8fafc;
+    transition: transform 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .about-image:hover {
+    transform: scale(1.05);
+  }
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    color: #0d6efd;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #0dcaf0;
+    font-weight: 600;
+  }
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+  .contact-email {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  .contact-email:hover {
+    color: #0dcaf0;
+  }
+  .divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #0dcaf0, transparent);
+    margin: 2rem 0;
+  }
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 2rem 1rem;
+      margin: 2rem 1rem;
+    }
+    .about-title {
+      font-size: 2rem;
+    }
+    .section-title {
+      font-size: 1.5rem;
+    }
+    .about-text {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="about-container">
+  <h1 class="about-title">About Us</h1>
+  
+  <div class="row g-4">
+    <div class="col-md-6 text-center">
+      <img
+        src="{{ url_for('static', filename='images/chatbot.png') }}"
+        alt="Mental Health Chatbot Picture"
+        class="about-image"
+      />
+    </div>
+    <div class="col-md-6">
+      <p class="about-text">
+        Welcome to MindGuard! This mental health chatbot is designed to provide reliable information and resources to help individuals improve their mental health and wellbeing.
+      </p>
+      <div class="divider"></div>
+      <p class="about-text">
+        We understand that seeking help for mental health concerns can be challenging, and our chatbot is designed to make the process as comfortable and accessible as possible.
+      </p>
+      <div class="divider"></div>
+      <p class="about-text">
+        However, please remember that our chatbot is not a substitute for professional help. If you are experiencing a mental health crisis, please seek help from a mental health professional.
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="about-text">
+        We believe that education and awareness are critical components of mental health. Our chatbot aims to provide accurate and up-to-date information on various mental health conditions, including symptoms, causes and effects. We also provide a variety of resources, such as mental health tests and exercises, to help you evaluate your mental health and improve your overall wellbeing.
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <h2 class="section-title">Our Team</h2>
+      <p class="about-text">
+        Chatbot was developed by a dedicated student who is passionate about mental health. The developer is committed to playing a part in breaking down the stigma surrounding mental health and creating a supportive community for individuals to seek help. Thank you for choosing our mental health chatbot as your first step towards a healthier and happier life! We are here to support you every step of the way.
+      </p>
+      <p class="about-text">
+        Contact the developer at <a href="mailto:rohancanish11@gmail.com" class="contact-email">rohancanish11@gmail.com</a> if you have any questions or feedback.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock content %}
